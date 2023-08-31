@@ -5,6 +5,8 @@ from transformations import *
 
 class MainClass :
     
+    #abc
+    
     def __init__(self):
         self.minterms = []
         self.dontcare_terms = []
