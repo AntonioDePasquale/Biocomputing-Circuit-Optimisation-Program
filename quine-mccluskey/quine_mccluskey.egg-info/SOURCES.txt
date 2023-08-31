@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+quine_mccluskey/__init__.py
+quine_mccluskey/qm.py
+quine_mccluskey.egg-info/PKG-INFO
+quine_mccluskey.egg-info/SOURCES.txt
+quine_mccluskey.egg-info/dependency_links.txt
+quine_mccluskey.egg-info/top_level.txt
+tests/__init__.py
+tests/test.py
