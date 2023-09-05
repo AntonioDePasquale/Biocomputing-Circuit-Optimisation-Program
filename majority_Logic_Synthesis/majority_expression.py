@@ -50,13 +50,23 @@ class MajorityExpression :
         one_count = 0
         zero_count = 0
                 
+        print('majority_sets 1 : ', majority_sets)
+        
+                    
         #checks the length of the majority gate strings in the list right to left and for AND/OR gates represented by 0 and 1
         #If there are more than 3 majority gate strings two AND gates are concatenated
-        if len(majority_sets) > 3 :
+        if len(majority_sets) > 3:
             for i in range(len(majority_sets) - 1, -1, -1):
-                if len(majority_sets) > 3 and majority_sets[i][0] == majority_sets[i-1][-1]:
+                if len(majority_sets) > 7 and majority_sets[i][0] == majority_sets[i-1][-1] and one_count == 2 or len(majority_sets) > 5 and majority_sets[i][0] == majority_sets[i-1][-1] and one_count == 1 or len(majority_sets) > 3 and one_count == 0 and majority_sets[i][0] == majority_sets[i-1][-1]:
                     majority_sets[i-1] = "⟨⟨" + majority_sets[i-1] + "⟩" + majority_sets[i][1:] + "⟩"
                     majority_sets.pop(i)
+                    print('majority_sets 2 : ', majority_sets)
+                    
+                if len(majority_sets) == 7 and one_count == 2 :
+                    break
+                
+                if len(majority_sets) == 5 and one_count == 1 :
+                    break
         
         #brackets are added to each AND gate (0) to macth correct majority gate notation
         for i in range(len(majority_sets) - 1, -1, -1):
@@ -66,6 +76,7 @@ class MajorityExpression :
             
             if len(majority_sets[i]) == 3 and "0" in majority_sets[i]:
                 majority_sets[i] = "⟨" + majority_sets[i] + "⟩"
+                print('majority_sets 3 : ', majority_sets)
                 
         #checks for OR gate (1) and formats it to form a complementary majority gate
         if one_count == 1 and len(majority_sets) == 3 :
@@ -74,16 +85,42 @@ class MajorityExpression :
                     majority_sets.pop(i)
                     majority_sets.insert(0, "1") #used to be placed at 0, change back if problems occur
                     one_count += one_count - 1
+                    print('majority_sets 4 : ', majority_sets)
         
-        #checks for OR gate (1) and formats it to form a complementary majority gate
-        if one_count >= 2 and len(majority_sets) >= 5 and len(majority_sets) > 3 :
+        #checks for OR gate (2) and formats it to form a complementary majority gate
+        if one_count >= 2 and len(majority_sets) >= 5 :
             for i in range(len(majority_sets) - 1, -1, -1):
                 if majority_sets[i] == "1" :
                     new_or_group = f"⟨{''.join(majority_sets[i-1]) if i-1 >= 0 else ''}{''.join(majority_sets[i])}{''.join(majority_sets[i+1]) if i+1 < len(majority_sets) else ''}⟩"
                     majority_sets[i] = new_or_group
                     majority_sets.pop(i - 1)
-                    majority_sets.pop(i + 1)
+                    majority_sets.pop(i)
                     one_count += one_count - 1
+                    print('majority_sets 5 : ', majority_sets)
+                    
+                    if len(majority_sets) - 2 == 3 or len(majority_sets) == 3:
+                        break
+                    
+                    if (len(majority_sets) - 2) < 3:
+                        for i in range(len(majority_sets)):
+                            if len(majority_sets[i]) == 9 :
+                                first_new_majority = "⟨" + majority_sets[i][2] + majority_sets[i][3] + majority_sets[i][4] + "⟩"
+                                second_new_majority = "⟨" + majority_sets[i][4] + majority_sets[i][6] + majority_sets[i][7] + "⟩"
+                                majority_sets[i] = first_new_majority
+                                majority_sets.insert(i + 1, second_new_majority)
+                                print("majority_sets 6 : ",  majority_sets)
+                                if (len(majority_sets) - 2) == 3:
+                                    break
+                    
+        #final check to see if there are three variables
+        if len(majority_sets) < 3:
+            for i in range(len(majority_sets)):
+                if len(majority_sets[i]) == 9 :
+                    first_new_majority = "⟨" + majority_sets[i][2] + majority_sets[i][3] + majority_sets[i][4] + "⟩"
+                    second_new_majority = "⟨" + majority_sets[i][4] + majority_sets[i][6] + majority_sets[i][7] + "⟩"
+                    majority_sets[i] = first_new_majority
+                    majority_sets.insert(i + 1, second_new_majority)
+                    print("majority_sets 7 : ",  majority_sets)
                     
         final_majority = f"⟨{''.join(majority_sets)}⟩"
         

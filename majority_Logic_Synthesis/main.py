@@ -5,8 +5,6 @@ from transformations import *
 
 class MainClass :
     
-    #abc
-    
     def __init__(self):
         self.minterms = []
         self.dontcare_terms = []
@@ -67,9 +65,9 @@ if __name__ == "__main__":
     simulated_annealing_test_string = ['⟨⟨⟨⟨JK0⟩H⟨J1K⟩⟩⟨⟨G0V⟩⟨G0⟨⟨q0d⟩⟨q0d⟩j⟩⟩A⟩⟨C⟨⟨b0J⟩0f⟩C⟩⟩⟨1⟨⟨T⟨1f1⟩C⟩F0⟩⟨⟨Q0C⟩⟨Q0C⟩j⟩⟩⟨⟨D0C⟩⟨D0⟨D0C⟩⟩1⟩⟩']
     
     # Instantiate the simulated annealing class and test the simulated_annealing function
-    simulated_annealing_class = SimulatedAnnealing(commutativity_class, associativity_class, majority_class, distributivity_class, simulated_annealing_test_string)
+    # simulated_annealing_class = SimulatedAnnealing(commutativity_class, associativity_class, majority_class, distributivity_class, simulated_annealing_test_string)
     
-    simulated_annealing_class.simulated_annealing()
+    # simulated_annealing_class.simulated_annealing()
     
     #Testing the 5 law functions
     
