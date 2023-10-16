@@ -94,8 +94,10 @@ class AssociativityLaw :
                     
         if len(final_majority_string) == 1 and final_majority_string[0] != process_string(majority_list)[0] :
             final_majority_list = replace_substring_in_list(majority_list_copy, majority_selection_copy, final_majority_string[0])
+            print("string section does obey the law of Associativity")
             return process_string(final_majority_list), True
         
+        
         else :
-            print("string section does not obey the law of Associativity")
+            #print("string section does not obey the law of Associativity")
             return process_string(majority_list), False

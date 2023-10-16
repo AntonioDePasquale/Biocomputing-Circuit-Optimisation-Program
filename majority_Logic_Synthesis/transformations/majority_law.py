@@ -64,8 +64,9 @@ class MajorityLaw :
             replaced_string = new_majority_list[0]
             
             final_majority_list = replace_substring_in_list(majority_list_copy, majority_selection_copy, replaced_string)
+            print("string does obey the law of Majority")
             return process_string(final_majority_list), True
         
         else :
-            print("string does not obey the law of Majority")
+            #print("string does not obey the law of Majority")
             return process_string(majority_list), False

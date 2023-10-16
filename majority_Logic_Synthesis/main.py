@@ -61,18 +61,18 @@ if __name__ == "__main__":
     majority_class = MajorityLaw()
     distributivity_class = DistributivityLaw()
     
-    #test string for simulated annealing class
+    # test string for simulated annealing class
     simulated_annealing_test_string = ['⟨⟨⟨⟨JK0⟩H⟨J1K⟩⟩⟨⟨G0V⟩⟨G0⟨⟨q0d⟩⟨q0d⟩j⟩⟩A⟩⟨C⟨⟨b0J⟩0f⟩C⟩⟩⟨1⟨⟨T⟨1f1⟩C⟩F0⟩⟨⟨Q0C⟩⟨Q0C⟩j⟩⟩⟨⟨D0C⟩⟨D0⟨D0C⟩⟩1⟩⟩']
     
     # Instantiate the simulated annealing class and test the simulated_annealing function
-    # simulated_annealing_class = SimulatedAnnealing(commutativity_class, associativity_class, majority_class, distributivity_class, simulated_annealing_test_string)
+    simulated_annealing_class = SimulatedAnnealing(commutativity_class, associativity_class, majority_class, distributivity_class, simulated_annealing_test_string)
     
-    # simulated_annealing_class.simulated_annealing()
+    simulated_annealing_class.simulated_annealing()
     
     #Testing the 5 law functions
     
     # Example strings for each test case
-    exampleMajList = ['⟨1⟨⟨T0C⟩F0⟩⟨⟨Q0C⟩⟨Q0C⟩j⟩⟩'] #breaks cant use
+    exampleMajList = ['⟨1⟨A0c⟩⟨b0D⟩⟩'] #breaks cant use1
     exampleMajorityLawList = ['⟨C⟨⟨b0J⟩0f⟩C⟩'] #working 1
     exampleAssociativityLawList = ['⟨⟨D0C⟩⟨D0⟨B0c⟩⟩1⟩'] #working 3
     exampleDistributivityLawList = ['⟨XY⟨UVZ⟩⟩'] #breaks (cant use)
@@ -94,7 +94,7 @@ if __name__ == "__main__":
     # majority_expression = distributivity_class.distributivity_depth_reduction(exampleDistributivityLawList)
     # print('distributivity depth reduction majority expression: ', majority_expression)
     
-    # Distributivity size reduction test
+    # # Distributivity size reduction test
     # majority_expression = distributivity_class.distributivity_size_reduction(exampleDistributivityLawList2)
     # print('distributivity size reduction majority expression: ', majority_expression)
     

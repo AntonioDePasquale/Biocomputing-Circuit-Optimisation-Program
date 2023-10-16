@@ -87,7 +87,7 @@ class DistributivityLaw :
             return process_string(final_majority_string), True
         
         else :
-            print("string section does not obey the law of Distributivity")
+            #print("string section does not obey the law of Distributivity")
             return process_string(majority_list_copy), False
         
     # M(x, y, M(u, v, z)) = M(M(x, y, u), M(x, y, v), z)
@@ -139,10 +139,11 @@ class DistributivityLaw :
         
         if len(final_list) == 1 and final_list[0] != process_string(majority_list)[0] and final_list[0] != '⟨⟩' :
             final_majority_string = replace_substring_in_list(majority_list_copy, majority_selection_copy, final_list[0])
+            print("string section does obey the law of Distributivity")
             return process_string(final_majority_string), True
         
         else :
-            print("string section does not obey the law of Distributivity")
+            #print("string section does not obey the law of Distributivity")
             return process_string(majority_list), False
         
                 

@@ -34,11 +34,12 @@ class SimulatedAnnealing:
             selected_function = random.choice(self.modification_functions)
             new_solution = selected_function(current_solution)
             changes_made = new_solution[1]
-            print('changes made: ', changes_made)
+            # print('changes made: ', changes_made)
 
             if changes_made:
                 new_length = len((new_solution[0])[0])
                 acceptance_prob = math.exp((current_length - new_length) / temperature)
+                print('changes made: ', changes_made)
                 
                 if new_length <= current_length or random.random() < acceptance_prob:
                     current_solution = new_solution[0]
