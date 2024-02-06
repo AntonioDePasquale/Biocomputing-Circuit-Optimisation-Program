@@ -8,4 +8,4 @@ An example of how I have been able to use Python to manipulate data.
 
 •	Simulates The best possible order of functions that can be applied to acheieve the best result (mimimum length logic string) using the simulated annealing algorithm.
 
-•	Served as an optomisation and circuit planning tool that to be used in real life PHD Biocomputing research. Optomisation principles, simulated annealing algorithm, Boolean algebraic logic, Quine McCluskey Algorithm and Majority Logic were all programmatically used to make this mathematical tool within Python
+•	Served as an optomisation and circuit planning tool to be used in real life PHD Biocomputing research. Optomisation principles, simulated annealing algorithm, Boolean algebraic logic, Quine McCluskey Algorithm and Majority Logic were all programmatically used to make this mathematical tool within Python
