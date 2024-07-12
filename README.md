@@ -1,4 +1,4 @@
-## Biocomputing Circuit Optomisation program – Python, Data manipulation, omtimisation principles, simulated-annealing algorithm, Quine McCluskey Algorithm
+## Biocomputing Circuit Optomisation program – Python, Data manipulation, optimisation principles, simulated-annealing algorithm, Quine McCluskey Algorithm
 
 An example of how I have been able to use Python to manipulate data.
 
