@@ -4,6 +4,14 @@ from transformations import *
 
 class SimulatedAnnealing:
 
+    """
+    3.	Optimisation Using Majority Logic Synthesis and Simulated Annealing:
+    The final phase involves optimising the string of majority logic gate expressions.
+    Principles such as commutativity, associativity, and distributivity are applied programmatically to minimise the string,
+    with the simulated annealing algorithm to further optimise the results.
+    """
+
+    # Instantiation of the transformative classes
     def __init__(self, commutativity_class, associativity_class, majority_class, distributivity_class, initial_string):
         self.commutativity_class = commutativity_class
         self.majority_class = majority_class

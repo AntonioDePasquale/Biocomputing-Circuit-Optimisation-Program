@@ -2,6 +2,13 @@ from quine_mccluskey.qm import QuineMcCluskey
 
 class BooleanExpression:
 
+    """
+    The first step of the process.
+    1.  Minimisation with the Quine-McCluskey Algorithm to get a boolean expression:
+    This class involves finding all the prime implicants of a function and using the Quine McCluskey algorithm to find the essential prime implicants.
+    This results in a minimised version of the original Boolean function.
+    """
+
     #constructor for BooleanExpression which takes two lists of integers for the minimum terms and dont care terms
     def __init__(self, min_terms, max_terms):
         self.min_terms = min_terms

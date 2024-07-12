@@ -72,11 +72,11 @@ if __name__ == "__main__":
     #Testing the 5 law functions
     
     # Example strings for each test case
-    exampleMajList = ['⟨1⟨A0c⟩⟨b0D⟩⟩'] #breaks cant use1
-    exampleMajorityLawList = ['⟨C⟨⟨b0J⟩0f⟩C⟩'] #working 1
-    exampleAssociativityLawList = ['⟨⟨D0C⟩⟨D0⟨B0c⟩⟩1⟩'] #working 3
-    exampleDistributivityLawList = ['⟨XY⟨UVZ⟩⟩'] #breaks (cant use)
-    exampleDistributivityLawList2 = ['⟨⟨G0V⟩⟨G0U⟩A⟩'] #working 2
+    example_MajList = ['⟨1⟨A0c⟩⟨b0D⟩⟩'] #breaks under certain conditions
+    example_Majority_Law_List = ['⟨C⟨⟨b0J⟩0f⟩C⟩'] #working 1
+    example_Associativity_Law_List = ['⟨⟨D0C⟩⟨D0⟨B0c⟩⟩1⟩'] #working 3
+    example_Distributivity_Law_List = ['⟨XY⟨UVZ⟩⟩'] #breaks under certain conditions
+    example_Distributivity_Law_List2 = ['⟨⟨G0V⟩⟨G0U⟩A⟩'] #working 2
     
     # # Commutativity test
     # majority_expression = commutativity_class.commutativity(exampleMajList)
