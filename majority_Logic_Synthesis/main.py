@@ -3,6 +3,9 @@ from majority_expression import MajorityExpression
 from simulated_annealing import SimulatedAnnealing
 from transformations import *
 
+"""
+The main class that is used to instantiate the other classes and organise the program processes
+"""
 class MainClass :
     
     def __init__(self):
