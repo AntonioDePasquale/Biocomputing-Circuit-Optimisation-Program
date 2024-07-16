@@ -1,5 +1,18 @@
 from auxillary_functions import *
 
+"""
+The function for the associativity transformation as outlined below that is used in the optimisation of majority logic.
+
+# Associativity Ω.A
+    # M(x, u, M(y, u, z))
+    # = M(z, u, M(y, u, x))
+    # = M(y, u, M(z, u, x))
+
+The rule of associativity demonstrates that the order in which the majority function is applied can be rearranged without altering the result 
+if both the outer and inner majority functions share a variable (in this case u is shared).
+This rule showcases how a majority function within a majority function can be reshaped, emphasizing the flexible nature of majority logic.
+"""
+
 class AssociativityLaw :
     
     # Associativity Ω.A
