@@ -1,7 +1,16 @@
 from auxillary_functions import *
 
 class Commutativity :
-    
+
+    """
+    The function for the commutativity transformation as outlined below that is used in the optimisation of majority logic.
+
+    This rule demonstrates that the majority function is commutative, indicating that the order of the input variables doesn't affect the outcome.
+    The result remains the same regardless of the arrangement of the inputs. For instance, the majority of x, y, and z is the same as the majority of y, x, and z.
+    M⟨x, y, z⟩ = M⟨y, x, z⟩ = M⟨z, y, x⟩
+
+    """
+
     # Constructor for the Commutativity  class.
     # Combination dict is required for commutativity functionality and initialsed with the class constructor
     def __init__(self) :
